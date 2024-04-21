@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymSystem.Login"
+             BackgroundColor="#FAF8ED">
+    <StackLayout>
+    <HorizontalStackLayout HorizontalOptions="Start"  Margin="10,10,10,0">
+        <Image Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw3.png"
+                   HorizontalOptions="Start"
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Aspect="AspectFit"/>
+        <Label Text="Gym Management System"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="15"
+               FontFamily="UbuntuBold"
+                   TextColor="#FE6D00"
+                   Margin="0,5,10,0"/>
+    </HorizontalStackLayout>
+    <Frame CornerRadius="10"
+           BorderColor="#51508b"
+           HasShadow="True"
+           Margin="190,70,190,50"
+           BackgroundColor="#fff">
+        
+
+        <VerticalStackLayout Margin="70,70,70,50"   BackgroundColor="#fff">
+            <Label Text="Log In"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   FontFamily="UbuntuBold"
+                   TextColor="#51508b"
+                   Margin="0,10,10,50"/>
+            <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                <Label  Text=" Username:"
+               Grid.Column="0"
+               WidthRequest="100"
+               FontFamily="UbuntuBold"
+               FontAttributes="Bold" />
+                    <Entry FontFamily="UbuntuRegular" Grid.Column="2" x:Name="UsernameEntry" WidthRequest="400"  Placeholder="Enter username" TextColor="#000" PlaceholderColor="#36454F" />
+            </Grid>
+
+            <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                <Label  Text=" Password:"
+               Grid.Column="0"
+               FontFamily="UbuntuBold"
+               WidthRequest="100"
+               FontAttributes="Bold" />
+
+                    <Entry  FontFamily="UbuntuRegular" Grid.Column="2" WidthRequest="400" x:Name="PasswordEntry" Placeholder="Enter password" IsPassword="True" TextColor="#000"  PlaceholderColor="#36454F" />
+              
+
+            </Grid>
+                <Button FontFamily="UbuntuRegular" Text="Login" Clicked="Login_Clicked" WidthRequest="150" Margin="0,20,0,0" BackgroundColor="#653666"/>
+        </VerticalStackLayout>
+    </Frame>
+    </StackLayout>
+</ContentPage>

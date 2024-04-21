@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymSystem.Instructors"
+             BackgroundColor="#FAF8ED">
+
+
+    <ScrollView>
+
+        <StackLayout>
+            <HorizontalStackLayout HorizontalOptions="Start"  Margin="10,10,10,0">
+                <Image Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw3.png"
+                   HorizontalOptions="Start"
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Aspect="AspectFit"/>
+                <Label Text="Gym Management System"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="15"
+                   FontFamily="UbuntuBold"
+                   TextColor="#FE6D00"
+                   Margin="0,5,10,0"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="0,10,10,0" Spacing="15" HorizontalOptions="End">
+                <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw.png"
+                    Clicked="Home_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+                <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw9.png"
+                    Clicked="ViewMembers_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+                <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw4.png"
+                    Clicked="ViewEquipment_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+                <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\ne4.png"
+                    Clicked="ViewInstructors_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+                <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw6.png"
+                    Clicked="Logout_Clicked"
+                    HorizontalOptions="Center"  Margin="0,0,10,0"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+
+
+            </HorizontalStackLayout>
+            <Frame CornerRadius="10"
+           BorderColor="#51508b"
+           HasShadow="True"
+           Margin="90,70,90,50"
+           BackgroundColor="#fff">
+
+                <VerticalStackLayout Margin="70,70,70,50"   BackgroundColor="#fff" >
+                    <Label Text="INSTRUCTOR DETAILS"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                    FontFamily="UbuntuBold"   
+                   FontSize="26"
+                   TextColor="#FE6D00"
+                   Margin="0,0,10,10"/>
+
+                    <!-- New Instructors Registration Section -->
+                    <StackLayout Margin="0,20,0,20">
+                        <Label Text="Add Instructor"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   FontFamily="UbuntuBold"        
+                         
+                   TextColor="#51508b"
+                   Margin="0,5,10,30"/>
+
+                        <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                            <Label  Text="First Name:"
+               Grid.Column="0"
+               WidthRequest="100"
+                FontFamily="UbuntuBold"                
+               FontAttributes="Bold" />
+                            <Entry FontFamily="UbuntuRegular" Grid.Column="2" x:Name="FirstNameEntry" WidthRequest="500"   Placeholder="Enter first name" TextColor="#000" PlaceholderColor="#36454F" />
+                        </Grid>
+
+                        <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                            <Label  Text="Last Name:"
+               Grid.Column="0"
+               FontFamily="UbuntuBold"
+               WidthRequest="100"
+               FontAttributes="Bold" />
+                            <Entry FontFamily="UbuntuRegular"  Grid.Column="2" x:Name="LastNameEntry" WidthRequest="500"  Placeholder="Enter last name" TextColor="#000" PlaceholderColor="#36454F" />
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                            <Label  Text="ID Number:"
+               Grid.Column="0"
+               FontFamily="UbuntuBold"                   
+               WidthRequest="100"
+               FontAttributes="Bold" />
+                            <Entry FontFamily="UbuntuRegular"  Grid.Column="2" x:Name="IDNumberEntry" WidthRequest="500"  Placeholder="Enter ID number" TextColor="#000" PlaceholderColor="#36454F" />
+                        </Grid>
+
+                        <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                            <Label  Text="Mobile:"
+               Grid.Column="0"
+               WidthRequest="100"
+                FontFamily="UbuntuBold"                
+               FontAttributes="Bold" />
+                            <Entry FontFamily="UbuntuRegular"  Grid.Column="2" x:Name="MobileEntry" WidthRequest="500"  Placeholder="Enter mobile" TextColor="#000" PlaceholderColor="#36454F" />
+                        </Grid>
+
+                        <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                            <Label  Text="Gender:"
+               Grid.Column="0"
+               WidthRequest="100"
+               FontFamily="UbuntuBold"                   
+               FontAttributes="Bold" />
+
+                            <Picker FontFamily="UbuntuRegular"  Grid.Column="2" x:Name="GenderPicker" WidthRequest="500" >
+                                <Picker.Items>
+                                    <x:String>Select Gender</x:String>
+                                    <x:String>Male</x:String>
+                                    <x:String>Female</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Grid>
+
+                        <Button FontFamily="UbuntuRegular"  Text="Register" Clicked="Register_Clicked"  Margin="380,10,380,0" BackgroundColor="#653666"/>
+                    </StackLayout>
+
+                    <!-- Search Instructors Section -->
+                    <StackLayout Margin="0,20,0,20">
+                        <Label Text="Search Instructors"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                   FontFamily="UbuntuBold"          
+                   FontSize="16"
+                   TextColor="#51508b"
+                   Margin="0,5,10,30"/>
+                        <Grid ColumnDefinitions="Auto,30,Auto" Margin="10" >
+                            <Entry FontFamily="UbuntuRegular"  Grid.Column="0" WidthRequest="500" Placeholder="Search by First Name, ID Number, or Mobile" x:Name="SearchEntry" TextColor="#000" PlaceholderColor="#36454F"/>
+                            <Button FontFamily="UbuntuRegular"  Grid.Column="2" WidthRequest="150" Text="Search" Clicked="Search_Clicked" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" BackgroundColor="#653666"/>
+                        </Grid>
+                    </StackLayout>
+                    <Label Text="Search results:"
+                  HorizontalOptions="Start"
+                  FontAttributes="Bold"
+                  FontSize="10"
+                  FontFamily="UbuntuBold"       
+                  TextColor="red"
+                  Margin="0,5,10,30"/>
+                    <StackLayout x:Name="SearchInstructorsList" Margin="0,20,0,20">
+
+                        <!-- Members list will be added here dynamically -->
+
+                    </StackLayout>
+                    <!-- Display Instructors Section -->
+                    <StackLayout Margin="0,20,0,20">
+                        <Label Text="Instructors List"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   FontFamily="UbuntuBold"          
+                   TextColor="#51508b"
+                   Margin="0,5,10,10"/>
+
+                        <StackLayout x:Name="InstructorsList" >
+                            <!-- Dynamically populated with instructors -->
+                        </StackLayout>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
+

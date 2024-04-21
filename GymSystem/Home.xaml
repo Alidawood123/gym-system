@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymSystem.Home"
+             BackgroundColor="#FAF8ED">
+    <StackLayout>
+        <HorizontalStackLayout HorizontalOptions="Start"  Margin="10,10,10,0">
+            <Image Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw3.png"
+                   HorizontalOptions="Start"
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Aspect="AspectFit"/>
+            <Label Text="Gym Management System"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                  FontFamily="UbuntuBold"
+                   FontSize="15"
+                   TextColor="#FE6D00"
+                   Margin="0,5,10,0"/>
+        </HorizontalStackLayout>
+    <HorizontalStackLayout Margin="0,10,10,0" Spacing="15" HorizontalOptions="End">
+        <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\ne.png"
+                    Clicked="Home_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+        <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw9.png"
+                    Clicked="ViewMembers_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+        <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw4.png"
+                    Clicked="ViewEquipment_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+            <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\ne3.png"
+                    Clicked="ViewInstructors_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+            <ImageButton  Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw6.png"
+                    Clicked="Logout_Clicked"
+                    HorizontalOptions="Center"  Margin="0,0,10,0"
+                    VerticalOptions="Center" HeightRequest="30" WidthRequest="30"  Aspect="AspectFit"/>
+
+
+    </HorizontalStackLayout>
+    <Frame CornerRadius="10"
+           BorderColor="#51508b"
+           HasShadow="True"
+           Margin="190,70,190,50"
+           BackgroundColor="#fff">
+
+        <VerticalStackLayout Margin="70,70,70,50"   BackgroundColor="#fff">
+           
+            <Label Text="Select an Operation"
+                   HorizontalOptions="Start"
+                   FontFamily="UbuntuBold"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   TextColor="#FE6D00"
+                   Margin="0,5,10,30"/>
+
+            <Grid ColumnDefinitions="200,30, 250,30 ,200" RowDefinitions="Auto,Auto,Auto,Auto">
+                <ImageButton Grid.Column="0" Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw10.png"
+                    Clicked="ViewMembers_Clicked"
+                    HorizontalOptions="Center"
+
+                    VerticalOptions="Center" HeightRequest="100" WidthRequest="100"  Aspect="AspectFit"/>
+
+                <Label Grid.Row="1"   Text="Members Page"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                  FontFamily="UbuntuBold"
+                   FontSize="15"
+                   TextColor="#51508b"
+                   Margin="0,5,10,10"/>
+
+                <ImageButton Grid.Column="2" Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\gm2.png"
+                    Clicked="ViewEquipment_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="100" WidthRequest="100"  Aspect="AspectFit"/>
+                <Label Grid.Row="1" Grid.Column="2"  Text="Equipment Page"
+                  HorizontalOptions="Center"
+                  FontAttributes="Bold"
+                  FontSize="15"
+                 FontFamily="UbuntuBold"
+                  TextColor="#51508b"
+                  Margin="0,5,10,10"/>
+
+                    <ImageButton Grid.Column="4" Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\ne5.png"
+                    Clicked="ViewInstructors_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" HeightRequest="100" WidthRequest="100"  Aspect="AspectFit"/>
+                    <Label Grid.Row="1" Grid.Column="4"  Text="Instructors Page"
+                  HorizontalOptions="Center"
+                  FontAttributes="Bold"
+                  FontSize="15"
+                 FontFamily="UbuntuBold"
+                  TextColor="#51508b"
+                  Margin="0,5,10,10"/>
+                </Grid>
+
+
+
+
+        </VerticalStackLayout>
+    </Frame>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,16 @@
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:GymSystem"
+       
+       x:Class="GymSystem.AppShell"
+       Title=""
+        BackgroundColor="#FAF8ED">
+
+
+
+
+    <ShellContent Title="" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+
+
+
+</Shell>

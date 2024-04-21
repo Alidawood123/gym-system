@@ -1,0 +1,44 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymSystem.MainPage"
+             BackgroundColor="#FAF8ED">
+
+    <Frame CornerRadius="10"
+           BorderColor="#51508b"
+           HasShadow="True"
+           Margin="190,70,190,50"
+           BackgroundColor="#fff">
+
+        <VerticalStackLayout BackgroundColor="#FFF">
+
+            <Image Source="C:\\Users\\HP\\source\\repos\\GymSystem\\GymSystem\\Resources\\Images\\nw3.png"
+                   HorizontalOptions="Center"
+                   Margin="0,70,10,0"
+                   HeightRequest="120"
+                   WidthRequest="150"
+                   Aspect="AspectFit"/>
+
+            <Label Text="GYM MANAGEMENT SYSTEM"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="40"
+                   FontFamily="UbuntuBold"
+                   TextColor="#51508b"
+                   Margin="0,20,10,50"/>
+
+            
+                <Button 
+                        Text="PROCEED"
+                        Clicked="Login_Clicked"
+                        HorizontalOptions="FillAndExpand"
+                        WidthRequest="200"      
+                    FontFamily="UbuntuRegular"
+                        BackgroundColor="#653666"/>
+
+
+
+        </VerticalStackLayout>
+
+    </Frame>
+
+</ContentPage>
